@@ -42,11 +42,11 @@ $(function() {
          TODO: escreve um teste que faz um loop em cada feed
         * no objeto allFeeds e garante que ele tenha um nome definido
         * e que o nome não está vazio.
-        * /
+        */
     });
 
 
-    /* TODO: Write a new test suite named "The menu"
+     /* TODO: Write a new test suite named "The menu"
      TODO:Escreva um novo conjunto de testes chamado "O menu" 
     */
 
@@ -97,5 +97,4 @@ $(function() {
          * pela função loadFeed que o conteúdo realmente muda.
          * Lembre-se, loadFeed () é assíncrono.
          */
-    
 }());
