@@ -16,27 +16,33 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-        /* TODO: Escreva um teste que faça um loop em cada feed
-         * no objeto allFeeds e garante que ele tenha um URL definido
-         * e que o URL não está vazio.
+        /*  TODO: Escreva um teste que faça um loop em cada feed
+            * no objeto allFeeds e garante que ele tenha um URL definido
+            * e que o URL não está vazio.
+            TODO: escreve um teste que faz um loop em cada feed
+            * no objeto allFeeds e garante que ele tenha um NOME definido
+            * e que o nome não está vazio.
         */
-        it('Url de cada feed deve estar definida e preenchida', function() {
-            expect(feedUrl).toBeDefined();
-            expect(feedUrl.length).not.toBe(0);
+        var testeName = new TesteName();
 
-            console.log(feedUrl);
-        });
-    
-        /* TODO: escreve um teste que faz um loop em cada feed
-        * no objeto allFeeds e garante que ele tenha um NOME definido
-        * e que o nome não está vazio.
-        */
-        it('Nome de cada feed deve estar definida e preenchida', function() {
-            expect(feedName).toBeDefined();
-            expect(feedName.length).not.toBe(0);
+        allFeeds.forEach(feed => {
+            var feedName = feed.name,
+                feedUrl = feed.url;
 
-            console.log(feedName);
+                beforeEach(function(done){
+                    testeName(function(){
+                        done();
+                    });
+                });
+        
+                it('Feed Nome completo e preenchido', function(done){
+                    expect(feedName).toBeDefined();
+                    expect(feedUrl.length).not.toBe(0);
+                    done();
+                });
         });
+
+        
     });
 
 
