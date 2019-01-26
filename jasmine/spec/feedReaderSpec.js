@@ -9,40 +9,34 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    /* This is our first test suite - a test suite just contains
-    * a related set of tests. This suite is all about the RSS
-    * feeds definitions, the allFeeds variable in our application.
-    */
     describe('RSS Feeds', function() {
-        /* This is our first test - it tests to make sure that the
-         * allFeeds variable has been defined and that it is not
-         * empty. Experiment with this before you get started on
-         * the rest of this project. What happens when you change
-         * allFeeds in app.js to be an empty array and refresh the
-         * page?
-         */
-        it('are defined', function() {
+        // Valida que a variavel $allFeeds foi definida e não está vazia
+        it('Feed deve estar definida e preenchida', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
-
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         * TODO: Escreva um teste que faça um loop em cada feed
+        /* TODO: Escreva um teste que faça um loop em cada feed
          * no objeto allFeeds e garante que ele tenha um URL definido
          * e que o URL não está vazio.
          */
+        it('Url de cada feed deve estar definida e preenchida', function() {
+            expect(feedUrl).toBeDefined();
+            expect(feedUrl.length).not.toBe(0);
 
-
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         TODO: escreve um teste que faz um loop em cada feed
-        * no objeto allFeeds e garante que ele tenha um nome definido
+            console.log(feedUrl);
+        });
+        
+        /* TODO: escreve um teste que faz um loop em cada feed
+        * no objeto allFeeds e garante que ele tenha um NOME definido
         * e que o nome não está vazio.
         */
+       it('Nome de cada feed deve estar definida e preenchida', function() {
+            expect(feedName).toBeDefined();
+            expect(feedName.length).not.toBe(0);
+
+            console.log(feedName);
+        });
     });
 
 
